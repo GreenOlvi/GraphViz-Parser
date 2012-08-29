@@ -7,9 +7,10 @@ use Parse::RecDescent;
 
 $DotParser::VERSION = '0.1';
 
+$::RD_AUTOSTUB = 1;
 
 my $grammar = q {
-   graph: ('graph' | 'digraph') ID
+   graph: ('graph' | 'digraph') ID '{' statement(s? /;/) '}' { return { name => $item{ID}, statements => $item{statement1} } }
    ID: /\S+/
 };
 
