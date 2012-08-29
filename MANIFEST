@@ -1,0 +1,5 @@
+Build.PL
+lib/DotParser.pm
+MANIFEST			This list of files
+README.md
+t/DotParser.t
